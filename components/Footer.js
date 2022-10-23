@@ -1,10 +1,17 @@
 import React from 'react'
+import { GitHub } from '@mui/icons-material'
 import {Public} from '@mui/icons-material'
 
 const Footer = () => {
   return (
     <div className='bg-gray-100 grid  text-gray-500 divide-y-[1px] divide-gray-300'>
-        <div className='px-8 py-3'>Nigeria</div>
+        <div className='px-8 py-3 flex justify-between items-center'>
+          <p>Nigeria</p>
+          <a href='https://github.com/MobolajiRichard'>
+            
+              <GitHub />
+            </a>
+        </div>
         <div className='px-8 py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense'>
             
             <div className='flex justify-center md:col-span-2 lg:col-start-2 lg:col-span-1'>

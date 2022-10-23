@@ -1,4 +1,5 @@
 import Head from "next/head"
+import { useRouter } from "next/router"
 import SearchHeader from "../components/SearchHeader"
 import { API_KEY, CONTEXT_KEY } from "../Keys"
 import Response from "../Response"
@@ -6,11 +7,13 @@ import SearchResults from "../components/SearchResults"
 import Footer from "../components/Footer"
 
 function Search({results}) {
-console.log(results)
+
+  const router = useRouter()
+console.log({router})
   return (
     <div>
         <Head>
-            <title>Search Results</title>
+            <title>Search Results - {router.query.term}</title>
         </Head>
         <div>
            <SearchHeader/>

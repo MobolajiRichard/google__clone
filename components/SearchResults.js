@@ -9,11 +9,11 @@ function SearchResults({results}) {
     console.log({startIndex})
   return (
     <div className='w-full px-3 max-w-3xl sm:pl-[5%] md:pl-[14%] lg:pl-[42]'>
-        <p className='text-sm text-gray-500 mt-3'> About ({results?.searchInformation.formattedTotalResults}) results ({results?.searchInformation.formattedSearchTime}) seconds </p>
+        <p className='text-sm text-gray-500 mt-3'> About ({results?.searchInformation?.formattedTotalResults}) results ({results?.searchInformation?.formattedSearchTime}) seconds </p>
     {results.items?.map((r)=>(
-        <div key={r.cacheId}>
-            <a href={r.link} className='text-sm'>{r.formattedUrl}</a>
-            <a href={r.link} className='text-xl text-blue-800'><h2>{r.title}</h2></a>
+        <div key={r.cacheId} className='mb-4'>
+            <a href={r.link} className='text-sm'>{r?.formattedUrl.substr(0,40)+'...'}</a>
+            <a href={r.link} className='text-xl text-blue-800'><h2>{r?.title}</h2></a>
             <p>{r.snippet}</p>
         </div>
     ))}

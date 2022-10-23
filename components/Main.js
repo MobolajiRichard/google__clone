@@ -17,7 +17,7 @@ const Main = () => {
   return (
     <form className='flex flex-col items-center justify-center w-full px-4'>
         <div>
-        <Image src='/google_image.png' width={300} height={100}/>
+        <Image src='/google_image.png' alt='logo' width={300} height={100}/>
         </div>
         <div className='border-2 border-gray-300 flex h-12 items-center rounded-full p-3 w-full hover:shadow-lg focus-within:shadow-lg max-w-2xl '>
             <Search/>
@@ -26,7 +26,7 @@ const Main = () => {
         </div>
         <div className='flex justify-center mt-4 space-x-3 '>
             <button onClick={search} className='btn'>Google Search</button>
-            <button onClick={search} className='btn'>I'm Feeling Lucky</button>
+            <button onClick={search} className='btn'>I&apos;m Feeling Lucky</button>
         </div>
     </form>
   )
